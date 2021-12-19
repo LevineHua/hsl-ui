@@ -11,7 +11,7 @@ yarn-error.log
 storybook-static
 coverage/
 website-dist
-lib
+# lib
 website/play/index.vue
 packages/hsl-ui/version.ts
 es/
