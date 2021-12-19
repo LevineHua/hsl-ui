@@ -1,11 +1,11 @@
 {
   "name": "hsl-ui",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "> TODO: description",
   "license": "ISC",
   "main": "dist/index.js",
   "dependencies": {
-    "@hsl-ui/test": "^0.0.2"
+    "@hsl-ui/test": "^0.0.3"
   },
   "gitHead": "fc1e98c2a72005ee0e001904b121304b3b2bfa65"
 }
