@@ -4,6 +4,5 @@
   "license": "MIT",
   "peerDependencies": {
     "vue": "^3.2.0"
-  },
-  "gitHead": "fc1e98c2a72005ee0e001904b121304b3b2bfa65"
+  }
 }
