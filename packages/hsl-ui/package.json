@@ -7,5 +7,8 @@
   "dependencies": {
     "@hsl-ui/test": "^0.0.5"
   },
-  "gitHead": "da0ac7aebcb2d3bab6073647425cb9fed7b68e29"
+  "gitHead": "3644fb280d1fee080f7993b0d161d599e9502d28",
+  "publishConfig": {
+    "access": "public"
+  }
 }
