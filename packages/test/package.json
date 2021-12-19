@@ -5,5 +5,6 @@
   "license": "MIT",
   "peerDependencies": {
     "vue": "^3.2.0"
-  }
+  },
+  "gitHead": "da0ac7aebcb2d3bab6073647425cb9fed7b68e29"
 }

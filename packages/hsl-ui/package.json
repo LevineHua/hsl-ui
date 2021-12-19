@@ -6,5 +6,6 @@
   "main": "dist/index.js",
   "dependencies": {
     "@hsl-ui/test": "^0.0.4"
-  }
+  },
+  "gitHead": "da0ac7aebcb2d3bab6073647425cb9fed7b68e29"
 }
