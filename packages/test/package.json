@@ -1,7 +1,7 @@
 {
   "name": "@hsl-ui/test",
   "version": "0.0.6",
-  "main": "dist/index.js",
+  "main": "index.ts",
   "license": "MIT",
   "peerDependencies": {
     "vue": "^3.2.0"
