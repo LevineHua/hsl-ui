@@ -3,15 +3,17 @@
  * @Author: 华松林
  * @Date: 2021-12-18 21:40:13
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-18 21:42:55
+ * @LastEditTime: 2021-12-24 17:59:02
  * @FilePath: /hsl-ui/build/rollup.config.bundle.js
  */
 // import vue from 'rollup-plugin-vue'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import path from 'path'
-// import commonjs from '@rollup/plugin-commonjs'
+import commonjs from '@rollup/plugin-commonjs'
 import { terser } from 'rollup-plugin-terser'
 import typescript from 'rollup-plugin-typescript2'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+
 import pkg from '../package.json'
 const deps = Object.keys(pkg.dependencies)
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -27,12 +29,13 @@ export default [
     plugins: [
       terser(),
       nodeResolve(),
-      // commonjs(),
       vue({
         target: 'browser',
         css: false,
         exposeFilename: false,
       }),
+      vueJsx(),
+      commonjs(),
       typescript({
         tsconfigOverride: {
           'include': [

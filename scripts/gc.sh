@@ -4,7 +4,7 @@
  # @Author: 华松林
  # @Date: 2021-12-18 21:43:13
  # @LastEditors: 华松林
- # @LastEditTime: 2021-12-18 21:43:28
+ # @LastEditTime: 2021-12-24 16:53:47
  # @FilePath: /hsl-ui/scripts/gc.sh
 ### 
 
@@ -72,10 +72,10 @@ cat > $DIRNAME/package.json <<EOF
 {
   "name": "@hsl-ui/$INPUT_NAME",
   "version": "0.0.0",
-  "main": "dist/index.js",
+  "main": "index.ts",
   "license": "MIT",
   "peerDependencies": {
-    "vue": "^3.0.5"
+    "vue": "^3.2.0"
   },
   "devDependencies": {
     "@vue/test-utils": "^2.0.0-beta.3"

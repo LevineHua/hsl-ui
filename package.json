@@ -114,7 +114,7 @@
   "description": "A Component Library for Vue3.0",
   "license": "MIT",
   "dependencies": {
-    "hsl-ui": "^0.0.7",
+    "hsl-ui": "^0.0.8",
     "@popperjs/core": "^2.4.4",
     "async-validator": "^3.4.0",
     "dayjs": "1.x",
