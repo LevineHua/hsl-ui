@@ -3,7 +3,7 @@
  * @Author: 华松林
  * @Date: 2021-08-06 15:31:29
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-25 22:41:29
+ * @LastEditTime: 2021-12-25 23:06:35
  * @FilePath: /hsl-ui/packages/menu/src/index.vue
 -->
 <template>
@@ -72,7 +72,7 @@ import { isString } from 'lodash-es'
 import SubMenuItem from './components/SubMenuItem.vue'
 
 export default defineComponent({
-  name: 'ElMenu',
+  name: 'CbMenu',
   components: { SubMenuItem, ElMenu, ElAside },
   props: {
     menus: Array,
@@ -98,8 +98,6 @@ export default defineComponent({
     },
   },
   setup(props) {
-    console.log(props);
-    
     // eslint-disable-next-line vue/no-setup-props-destructure
     const { currentRoute, push, resolve } = props.useRouter()
 

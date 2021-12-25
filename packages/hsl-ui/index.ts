@@ -3,14 +3,14 @@
  * @Author: 华松林
  * @Date: 2021-12-18 21:49:51
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-25 21:59:03
+ * @LastEditTime: 2021-12-25 23:07:01
  * @FilePath: /hsl-ui/packages/hsl-ui/index.ts
  */
 import type { App } from 'vue'
 import ElTest from '@hsl-ui/test'
 import ElHeader from '@hsl-ui/header'
 
-import ElMenu from '@hsl-ui/menu'
+import CbMenu from '@hsl-ui/menu'
 import ElForm, { useForm } from '@hsl-ui/form'
 
 // if you encountered problems alike "Can't resolve './version'"
@@ -23,7 +23,7 @@ const components = [
   ElTest,
   ElHeader,
   ElForm,
-  ElMenu,
+  CbMenu,
 ]
 
 const install = (app: App): void => {
@@ -36,7 +36,7 @@ export {
   ElTest,
   ElHeader,
   ElForm,
-  ElMenu,
+  CbMenu,
   version,
   install,
 }
