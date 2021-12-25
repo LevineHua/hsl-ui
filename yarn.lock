@@ -2935,11 +2935,6 @@
   resolved "https://registry.yarnpkg.com/@vue/shared/-/shared-3.2.26.tgz#7acd1621783571b9a82eca1f041b4a0a983481d9"
   integrity sha512-vPV6Cq+NIWbH5pZu+V+2QHE9y1qfuTq49uNWw4f7FDEeZaDU2H2cx5jcUZOAKW7qTrUS4k6qZPbMy1x4N96nbA==
 
-"@vue/test-utils@^2.0.0-beta.3":
-  version "2.0.0-rc.18"
-  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0-rc.18.tgz#ff22b252424fe72e5462cbb3a8e7405cef11ffb6"
-  integrity sha512-aifolXjVdsogjaLmDoZ0FU8vN+R67aWmg9OuVeED4w5Ij5GFQLrlhM19uhWe/r5xXUL4fXMk3pX5wW6FJP1NcQ==
-
 "@vueuse/core@^7.0.0":
   version "7.4.1"
   resolved "https://registry.yarnpkg.com/@vueuse/core/-/core-7.4.1.tgz#81ede3f67dfd58af8284c910ac2fee25458892c6"
@@ -7242,6 +7237,15 @@ hsl-regex@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/hsl-regex/-/hsl-regex-1.0.0.tgz#d49330c789ed819e276a4c0d272dffa30b18fe6e"
   integrity sha1-1JMwx4ntgZ4nakwNJy3/owsY/m4=
+
+hsl-ui@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/hsl-ui/-/hsl-ui-0.0.16.tgz#8a019ee2b5189f18377c73e005f1e3112b4fb6b4"
+  integrity sha512-soT/EeMXFKQ1CfkPG/NsIMSFNBARIceb4fQFUyXZ340FUMtDyS8EHBB7KP1wfQ0gQi+uIcuS8xI5KBY/tQ2+TA==
+  dependencies:
+    "@hsl-ui/form" "^0.0.3"
+    "@hsl-ui/menu" "^0.0.7"
+    "@hsl-ui/test" "^0.0.8"
 
 hsla-regex@^1.0.0:
   version "1.0.0"
