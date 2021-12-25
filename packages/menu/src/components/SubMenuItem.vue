@@ -3,7 +3,7 @@
  * @Author: 华松林
  * @Date: 2021-12-03 11:34:09
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-25 21:02:15
+ * @LastEditTime: 2021-12-25 22:41:08
  * @FilePath: /hsl-ui/packages/menu/src/components/SubMenuItem.vue
 -->
 <template>
@@ -28,6 +28,7 @@ import { ElSubMenu } from 'element-plus'
 import MenuItem from './MenuItem.vue'
 export default defineComponent({
   name: 'SubMenuItem',
+  isSubMenu: true,
   components: {
     MenuItem,
     ElSubMenu,

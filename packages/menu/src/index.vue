@@ -3,8 +3,8 @@
  * @Author: 华松林
  * @Date: 2021-08-06 15:31:29
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-25 22:27:09
- * @FilePath: /hsl-ui/packages/menu/src/inde.vue
+ * @LastEditTime: 2021-12-25 22:41:29
+ * @FilePath: /hsl-ui/packages/menu/src/index.vue
 -->
 <template>
   <div class="cb-menu">
@@ -98,6 +98,8 @@ export default defineComponent({
     },
   },
   setup(props) {
+    console.log(props);
+    
     // eslint-disable-next-line vue/no-setup-props-destructure
     const { currentRoute, push, resolve } = props.useRouter()
 
