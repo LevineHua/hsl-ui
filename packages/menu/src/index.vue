@@ -3,7 +3,7 @@
  * @Author: 华松林
  * @Date: 2021-08-06 15:31:29
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-25 21:16:00
+ * @LastEditTime: 2021-12-25 21:22:25
  * @FilePath: /hsl-ui/packages/menu/src/index.vue
 -->
 <template>
@@ -12,121 +12,12 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, computed, unref, ref } from 'vue'
-
-import { ElMenu, ElAside } from 'element-plus'
-import { isString } from 'lodash-es'
-import SubMenuItem from './components/SubMenuItem.vue'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'CbMenu',
-  components: { SubMenuItem, ElMenu, ElAside },
-  props: {
-    menus: Array,
-    // 是否在一级菜单显示首页按钮
-    showHomeMenu: {
-      type: Boolean,
-      default: true,
-    },
-    // 首页路径
-    homePath: {
-      type: String,
-      default: '/',
-    },
-    // 网站logo
-    webLogo: {
-      type: String,
-      default: '',
-      required: true,
-    },
-    useRouter: {
-      type: Function,
-      required: true,
-    },
-  },
-  setup(props) {
-    // eslint-disable-next-line vue/no-setup-props-destructure
-    const { currentRoute, push, resolve } = props.useRouter()
-
-    // 当前打开的一级菜单
-    const currentActiveMenu = ref({})
-    // 当前打开的一级菜单的 path
-    const currentParentPath = ref('')
-
-    const propsRef = computed(() => {
-      return props
-    })
-
-    // 菜单
-    const menuList = computed(() => {
-      return unref(propsRef).menus
-    })
-
-    // 二级及以下菜单
-    const childMenuList = computed(() => {
-      const menus = unref(menuList) as []
-      const parent = unref(currentRoute).matched[0]
-      const key = parent.path
-
-      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
-      currentActiveMenu.value = parent
-
-      // const key = unref(currentParentPath)
-
-      const parentIndex = menus.findIndex((val: any) => val.path === key)
-
-      const list = (menus[parentIndex] as any)?.children || []
-
-      return list.filter((val) => !(val as any).meta?.hideMenu)
-    })
-
-    // 当前触发的路由
-    const getDefaultActive = computed(() => {
-      const { path, meta } = unref(currentRoute)
-      if (meta && meta.currentActiveMenu) {
-        return meta.currentActiveMenu
-      } else {
-        return path
-      }
-    })
-
-    // 切换菜单
-    function handleMenuClick(route: [string, Object]) {
-      // currentParentPath.value = path
-      if (isString(route)) {
-        push(route)
-      } else {
-        const { path, meta } = route as any
-        if (meta && meta.newWindow) {
-          window.open(
-            resolve({
-              path,
-            }).href,
-            '_blank'
-          )
-        } else {
-          push(path)
-        }
-      }
-    }
-
-    function menuHasChildren(menuTreeItem): boolean {
-      return (
-        !menuTreeItem.meta?.hideChildrenInMenu &&
-        Reflect.has(menuTreeItem, 'children') &&
-        !!menuTreeItem.children &&
-        menuTreeItem.children.length > 0
-      )
-    }
-
-    return {
-      menuList,
-      childMenuList,
-      currentActiveMenu,
-      handleMenuClick,
-      menuHasChildren,
-      getDefaultActive,
-    }
+  name: 'ElMenu',
+  setup() {
+    return {}
   },
 })
 </script>
