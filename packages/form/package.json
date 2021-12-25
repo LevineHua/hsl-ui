@@ -1,13 +1,13 @@
 {
   "name": "@hsl-ui/form",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.ts",
   "license": "MIT",
   "peerDependencies": {
     "vue": "^3.2.0"
   },
   "dependencies": {
-    "@hsl-ui/utils": "^0.0.7",
+    "@hsl-ui/utils": "^0.0.8",
     "moment": "^2.29.1"
   },
   "publishConfig": {
