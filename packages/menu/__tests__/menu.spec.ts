@@ -1,15 +1,15 @@
-import { mount } from '@vue/test-utils'
-import Menu from '../src/index.vue'
+/*
+ * @Description: 
+ * @Author: 华松林
+ * @Date: 2021-12-25 20:41:00
+ * @LastEditors: 华松林
+ * @LastEditTime: 2021-12-25 21:26:14
+ * @FilePath: /hsl-ui/packages/menu/__tests__/menu.spec.ts
+ */
+'use strict'
 
-const AXIOM = 'Rem is the best girl'
+const test = require('..')
 
-describe('Menu.vue', () => {
-  test('render test', () => {
-    const wrapper = mount(Menu, {
-      slots: {
-        default: AXIOM,
-      },
-    })
-    expect(wrapper.text()).toEqual(AXIOM)
-  })
+describe('test', () => {
+  it('needs tests')
 })
