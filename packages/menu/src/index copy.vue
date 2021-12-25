@@ -3,12 +3,65 @@
  * @Author: 华松林
  * @Date: 2021-08-06 15:31:29
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-25 21:16:00
+ * @LastEditTime: 2021-12-25 20:46:19
  * @FilePath: /hsl-ui/packages/menu/src/index.vue
 -->
 <template>
   <div class="cb-menu">
-    cb-menu
+    <el-aside width="auto" style="background: #fff">
+      <div class="container-menu">
+        <div class="main-menu-wrapper">
+          <a :href="homePath" class="logo">
+            <img :src="webLogo" />
+          </a>
+          <div class="main-menu">
+            <div
+              v-if="showHomeMenu"
+              class="main-menu-link"
+              :class="{ active: homePath === currentActiveMenu.path }"
+              @click="handleMenuClick(homePath)"
+            >
+              <img :src="webLogo" />
+              首页
+            </div>
+            <div
+              v-for="(item, index) in menuList"
+              :key="index"
+              class="main-menu-link"
+              :class="{
+                active:
+                  item.path === currentActiveMenu.path ||
+                  (item.redirect &&
+                    item.redirect === currentActiveMenu.redirect),
+              }"
+              @click="handleMenuClick(item)"
+            >
+              <img :src="item.meta.icon || webLogo" />
+              {{ item.title }}
+            </div>
+          </div>
+        </div>
+        <div
+          v-if="childMenuList.length && !menuHasChildren(childMenuList)"
+          class="main-menu-sider"
+        >
+          <div class="menu-title">
+            {{
+              currentActiveMenu.meta?.menuTitle || currentActiveMenu.meta?.title
+            }}
+          </div>
+          <el-menu
+            class="el-menu-vertical-demo"
+            :router="true"
+            :default-active="getDefaultActive"
+          >
+            <template v-for="item in childMenuList" :key="item.path">
+              <SubMenuItem :item="item" :default-active="getDefaultActive" />
+            </template>
+          </el-menu>
+        </div>
+      </div>
+    </el-aside>
   </div>
 </template>
 <script lang="ts">
