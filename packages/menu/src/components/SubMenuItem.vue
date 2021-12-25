@@ -3,8 +3,8 @@
  * @Author: 华松林
  * @Date: 2021-12-03 11:34:09
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-08 15:21:50
- * @FilePath: /finches-ui/packages/components/menu/src/components/SubMenuItem.vue
+ * @LastEditTime: 2021-12-25 21:02:15
+ * @FilePath: /hsl-ui/packages/menu/src/components/SubMenuItem.vue
 -->
 <template>
   <MenuItem v-if="!menuHasChildren(item) && getShowMenu" v-bind="$props" />
@@ -19,6 +19,7 @@
       <SubMenuItem v-bind="$props" :item="childrenItem" />
     </template>
   </ElSubMenu>
+  
 </template>
 <script lang="ts">
 import { defineComponent, computed } from 'vue'
@@ -27,7 +28,6 @@ import { ElSubMenu } from 'element-plus'
 import MenuItem from './MenuItem.vue'
 export default defineComponent({
   name: 'SubMenuItem',
-  isSubMenu: true,
   components: {
     MenuItem,
     ElSubMenu,
