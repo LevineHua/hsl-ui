@@ -3,7 +3,7 @@
  * @Author: 华松林
  * @Date: 2021-12-18 21:40:13
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-24 17:53:19
+ * @LastEditTime: 2021-12-24 18:20:48
  * @FilePath: /hsl-ui/build/rollup.config.js
  */
 /**
@@ -51,7 +51,6 @@ export default inputs.map(name => ({
     //   },
     // }),
     nodeResolve(),
-    // commonjs(),
     typescript({
       tsconfigOverride: {
         compilerOptions: {
@@ -70,7 +69,8 @@ export default inputs.map(name => ({
       target: 'browser',
       css: false,
     }),
-    // vueJsx(),
+    vueJsx(),
+    commonjs(),
   ],
   external(id) {
     return /^vue/.test(id)

@@ -3,7 +3,7 @@
  * @Author: 华松林
  * @Date: 2021-08-12 15:14:22
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-24 17:17:18
+ * @LastEditTime: 2021-12-24 18:18:17
  * @FilePath: /hsl-ui/packages/form/src/components/FormItem.vue
 -->
 <script lang="tsx">
@@ -11,7 +11,7 @@ import { computed, defineComponent, toRefs, unref, h } from 'vue'
 import { ElCol, ElFormItem } from 'element-plus'
 import { cloneDeep, upperFirst } from 'lodash-es'
 import { isArray, isFunction, isBoolean, isNull } from '@hsl-ui/utils/is'
-import { getSlot } from '@hsl-ui/utils/helper/tsxHelper.tsx'
+import { getSlot } from '@hsl-ui/utils/helper/tsxHelper.ts'
 import { componentMap } from '../componentMap'
 
 import {
