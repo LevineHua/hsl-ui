@@ -1,6 +1,6 @@
 {
   "name": "@hsl-ui/form",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.ts",
   "license": "MIT",
   "peerDependencies": {
@@ -8,8 +8,8 @@
   },
   "dependencies": {
     "@hsl-ui/utils": "^0.0.8",
-    "moment": "^2.29.1",
-    "element-plus": "^1.2.0-beta.4"
+    "element-plus": "^1.2.0-beta.4",
+    "moment": "^2.29.1"
   },
   "publishConfig": {
     "access": "public"
