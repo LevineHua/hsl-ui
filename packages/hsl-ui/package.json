@@ -7,7 +7,8 @@
   "dependencies": {
     "@hsl-ui/form": "^0.0.3",
     "@hsl-ui/menu": "^0.0.7",
-    "@hsl-ui/test": "^0.0.8"
+    "@hsl-ui/test": "^0.0.8",
+    "@hsl-ui/header": "^0.0.0"
   },
   "gitHead": "3644fb280d1fee080f7993b0d161d599e9502d28",
   "publishConfig": {

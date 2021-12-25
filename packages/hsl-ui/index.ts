@@ -3,11 +3,13 @@
  * @Author: 华松林
  * @Date: 2021-12-18 21:49:51
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-25 21:21:18
+ * @LastEditTime: 2021-12-25 21:59:03
  * @FilePath: /hsl-ui/packages/hsl-ui/index.ts
  */
 import type { App } from 'vue'
 import ElTest from '@hsl-ui/test'
+import ElHeader from '@hsl-ui/header'
+
 import ElMenu from '@hsl-ui/menu'
 import ElForm, { useForm } from '@hsl-ui/form'
 
@@ -19,6 +21,7 @@ const version = version_ // version_ to fix tsc issue
 
 const components = [
   ElTest,
+  ElHeader,
   ElForm,
   ElMenu,
 ]
@@ -31,6 +34,7 @@ const install = (app: App): void => {
 
 export {
   ElTest,
+  ElHeader,
   ElForm,
   ElMenu,
   version,
