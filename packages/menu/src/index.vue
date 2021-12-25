@@ -3,8 +3,8 @@
  * @Author: 华松林
  * @Date: 2021-08-06 15:31:29
  * @LastEditors: 华松林
- * @LastEditTime: 2021-12-25 20:46:19
- * @FilePath: /hsl-ui/packages/menu/src/index.vue
+ * @LastEditTime: 2021-12-25 22:27:09
+ * @FilePath: /hsl-ui/packages/menu/src/inde.vue
 -->
 <template>
   <div class="cb-menu">
@@ -72,7 +72,7 @@ import { isString } from 'lodash-es'
 import SubMenuItem from './components/SubMenuItem.vue'
 
 export default defineComponent({
-  name: 'CbMenu',
+  name: 'ElMenu',
   components: { SubMenuItem, ElMenu, ElAside },
   props: {
     menus: Array,
