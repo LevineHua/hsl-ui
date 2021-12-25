@@ -8,5 +8,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "element-plus": "^1.2.0-beta.4"
+  },
+  "devDependencies": {
+    "lodash-es": "^4.17.21"
   }
 }
