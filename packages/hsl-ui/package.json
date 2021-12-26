@@ -8,7 +8,8 @@
     "@hsl-ui/form": "^0.0.3",
     "@hsl-ui/header": "^0.0.5",
     "@hsl-ui/menu": "^0.0.12",
-    "@hsl-ui/test": "^0.0.8"
+    "@hsl-ui/test": "^0.0.8",
+    "@hsl-ui/theme-chalk": "^0.0.2"
   },
   "gitHead": "9a44042431483287640af4eaf0d2975dae6aac18",
   "publishConfig": {
